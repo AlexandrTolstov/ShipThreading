@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipThreading", "ShipThreading\ShipThreading.csproj", "{55F1037B-B9AF-4522-8E1D-D6A7ECCC03DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55F1037B-B9AF-4522-8E1D-D6A7ECCC03DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F1037B-B9AF-4522-8E1D-D6A7ECCC03DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F1037B-B9AF-4522-8E1D-D6A7ECCC03DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F1037B-B9AF-4522-8E1D-D6A7ECCC03DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59056A5E-4EAB-48D4-A048-98A011EA630D}
+	EndGlobalSection
+EndGlobal
