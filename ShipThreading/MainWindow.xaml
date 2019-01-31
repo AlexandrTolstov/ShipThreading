@@ -6,7 +6,14 @@
         xmlns:local="clr-namespace:ShipThreading"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+
+    <StackPanel>
+        <Canvas x:Name="Layer_1" Width="800" Height="600.405" Canvas.Left="0" Canvas.Top="20" Margin="100 0 0 0">
+            <Label>
+                Хлеб
+            </Label>
+            <Path x:Name="Path" Width="173" Height="51" Canvas.Left="0" Canvas.Top="32.0561" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 13.5,82.5561L 140.5,82.5561L 172.5,32.5561L 114.5,38.5561L 115.5,47.5561L 0.5,47.5561L 13.5,82.5561 Z "/>
+            <Path x:Name="Path_0" Width="18.3333" Height="48" Canvas.Left="27.8659" Canvas.Top="3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 28.3659,47.5L 28.3659,28.25L 36.1159,28.25L 36.1159,16.75L 44.3659,16.75L 44.3659,0.500031L 45.6159,0.500031L 45.6993,47.4167L 28.3659,47.5 Z "/>
+        </Canvas>
+    </StackPanel>
 </Window>
