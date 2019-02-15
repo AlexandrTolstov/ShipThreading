@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShipThreading"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1200">
+        Title="MainWindow" Height="800" Width="1200">
 
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="300"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -54,5 +56,46 @@
                 <Path Width="16.2084" Height="52.2308" Canvas.Left="24.4498" Canvas.Top="3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 24.9498,51.7308L 24.9498,30.748L 31.7497,30.748L 31.7497,18.2128L 38.9883,18.2128L 38.9883,0.500031L 40.0851,0.500031L 40.1582,51.64L 24.9498,51.7308 Z "/>
             </Canvas>
         </StackPanel>
+
+        <Border x:Name="GeneratorFild"
+                Grid.Row="0"
+                Grid.Column="1"
+                Background="Aqua"
+                BorderBrush="Red"
+                BorderThickness="2"
+                CornerRadius="20"
+                Margin="20 30 20 0">
+        </Border>
+        <Label Grid.Row="0"
+               Grid.Column="1"
+               HorizontalAlignment="Center"
+               FontSize="20">Генератор караблей</Label>
+        <Border Grid.Row="1"
+                Grid.Column="1"
+                Background="Aqua"
+                Margin="250 0 250 0">
+        </Border>
+        <Border x:Name="TunellFild"
+                Grid.Row="2"
+                Grid.Column="1"
+                Background="Aqua"
+                BorderBrush="Red"
+                BorderThickness="2"
+                CornerRadius="20"
+                Margin="130 0 130 0">
+        </Border>
+
+        <TextBlock Grid.Row="2"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               Margin="10">
+            <Run FontSize="15" Foreground="#E0AF00" FontWeight="Bold">Туннель</Run>
+            <LineBreak/>
+            <Run FontSize="15" Foreground="Red" FontWeight="Bold">Вместимость 5</Run>
+            <LineBreak/>
+            <Run FontSize="15" Foreground="Red" FontWeight="Bold">корабликов</Run>
+        </TextBlock>
+
+        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"></Border>
     </Grid>
 </Window>
