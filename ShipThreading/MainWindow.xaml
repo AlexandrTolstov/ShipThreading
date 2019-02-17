@@ -5,27 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShipThreading"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200">
+        Title="MainWindow" Height="800" Width="1230">
 
-    <Grid ShowGridLines="True">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="300"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
             <RowDefinition Height="70"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
             <ColumnDefinition Width="600"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <StackPanel Orientation="Vertical" Width="200" Grid.Row="0" Grid.Column="0">
             <Canvas x:Name="Canv_Hleb" Height="100">
                 <Label Canvas.Left="110" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">Хлеб</Label>
-                <Path x:Name="Path_Hleb" Width="97.5" Height="33.2867" Canvas.Left="0" Canvas.Top="20.6996" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 7.79359,53.4863L 79.0465,53.4863L 97,21.1996L 64.4593,25.074L 65.0203,30.8856L 0.5,30.8856L 7.79359,53.4863 Z "/>
-                <Path x:Name="Path_Hleb_0" Width="10.7248" Height="31.3495" Canvas.Left="15.6341" Canvas.Top="-3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 16.1341,30.8494L 16.1341,18.4191L 20.4822,18.4191L 20.4822,10.9931L 25.1108,10.9931L 25.1108,0.499969L 25.8121,0.499969L 25.8589,30.7956L 16.1341,30.8494 Z "/>
+                <Path x:Name="Path_Hleb" Width="97.5" Height="33.2867" Canvas.Left="0" Canvas.Top="20.6996" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#EE9191" Data="F1 M 7.79359,53.4863L 79.0465,53.4863L 97,21.1996L 64.4593,25.074L 65.0203,30.8856L 0.5,30.8856L 7.79359,53.4863 Z "/>
+                <Path x:Name="Path_Hleb_0" Width="10.7248" Height="31.3495" Canvas.Left="15.6341" Canvas.Top="-3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#EE9191" Data="F1 M 16.1341,30.8494L 16.1341,18.4191L 20.4822,18.4191L 20.4822,10.9931L 25.1108,10.9931L 25.1108,0.499969L 25.8121,0.499969L 25.8589,30.7956L 16.1341,30.8494 Z "/>
             </Canvas>
             <Canvas x:Name="Canv_Banana" Height="100">
                 <Label Canvas.Left="110" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#E0AF00">Бананы</Label>
@@ -47,8 +47,8 @@
             </Canvas>
             <Canvas x:Name="Ship_50" Height="80">
                 <Label Canvas.Left="130" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">50</Label>
-                <Path x:Name="Path" Width="114.808" Height="38.2827" Canvas.Left="0" Canvas.Top="23.9028" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 9.10177,61.6855L 93.1344,61.6855L 114.308,24.4028L 75.9308,28.8767L 76.5925,35.5876L 0.5,35.5876L 9.10177,61.6855 Z "/>
-                <Path x:Name="Path_0" Width="12.469" Height="36.0458" Canvas.Left="18.4382" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 18.9382,35.5458L 18.9382,21.1919L 24.0661,21.1919L 24.0661,12.6169L 29.5249,12.6169L 29.5249,0.5L 30.352,0.5L 30.4072,35.4837L 18.9382,35.5458 Z "/>
+                <Path Width="114.808" Height="38.2827" Canvas.Left="0" Canvas.Top="23.9028" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 9.10177,61.6855L 93.1344,61.6855L 114.308,24.4028L 75.9308,28.8767L 76.5925,35.5876L 0.5,35.5876L 9.10177,61.6855 Z "/>
+                <Path Width="12.469" Height="36.0458" Canvas.Left="18.4382" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 18.9382,35.5458L 18.9382,21.1919L 24.0661,21.1919L 24.0661,12.6169L 29.5249,12.6169L 29.5249,0.5L 30.352,0.5L 30.4072,35.4837L 18.9382,35.5458 Z "/>
             </Canvas>
             <Canvas x:Name="Ship_100" Height="80">
                 <Label Canvas.Left="160" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">100</Label>
@@ -65,6 +65,7 @@
                 BorderThickness="2"
                 CornerRadius="20"
                 Margin="20 30 20 0">
+            <WrapPanel x:Name="GeneratorWrap"></WrapPanel>
         </Border>
         <Label Grid.Row="0"
                Grid.Column="1"
@@ -96,6 +97,75 @@
             <Run FontSize="15" Foreground="Red" FontWeight="Bold">корабликов</Run>
         </TextBlock>
 
-        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"></Border>
+        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Canvas Width="1200" Height="70" Canvas.Left="0" Canvas.Top="0">
+                <Path Width="400" Height="70" Canvas.Left="150" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="Aqua" Data="F1 M 334.589,0.5L 0.5,129.494L 124.167,129.049L 448.978,0.944214L 334.589,0.5 Z "/>
+                <Path Width="400" Height="70" Canvas.Left="630" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="Aqua" Data="F1 M 703.1,425.248L 369.011,296.254L 492.678,296.698L 817.489,424.803L 703.1,425.248 Z "/>
+                <Rectangle Width="50" Height="70" Canvas.Left="570" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="Aqua"/>
+            </Canvas>
+        </Border>
+
+        <Border x:Name="PrichalHleb"
+                Grid.Row="4"
+                Grid.Column="0"
+                Background="Gray"
+                BorderBrush="Red"
+                BorderThickness="2"
+                CornerRadius="20"
+                Margin="120 0 0 20">
+        </Border>
+
+        <TextBlock Grid.Row="4"
+               Grid.Column="0"
+               HorizontalAlignment="Left"
+               Margin="10">
+            <Run FontSize="15" Foreground="Red" FontWeight="Bold">Причал по</Run>
+            <LineBreak/>
+            <Run FontSize="15" Foreground="Red" FontWeight="Bold">погрузке</Run>
+            <LineBreak/>
+            <Run FontSize="15" Foreground="Red" FontWeight="Bold">хлеба</Run>
+        </TextBlock>
+
+        <Border x:Name="PrichalBanana"
+                Grid.Row="4"
+                Grid.Column="1"
+                Background="Gray"
+                BorderBrush="Red"
+                BorderThickness="2"
+                CornerRadius="20"
+                Margin="210 0 210 20">
+        </Border>
+
+        <TextBlock Grid.Row="4"
+               Grid.Column="1"
+               HorizontalAlignment="Left"
+               Margin="400 10 10 10">
+            <Run FontSize="15" Foreground="#E0AF00" FontWeight="Bold">Причал по</Run>
+            <LineBreak/>
+            <Run FontSize="15" Foreground="#E0AF00" FontWeight="Bold">погрузке</Run>
+            <LineBreak/>
+            <Run FontSize="15" Foreground="#E0AF00" FontWeight="Bold">банана</Run>
+        </TextBlock>
+
+        <Border x:Name="PrichalOdejda"
+                Grid.Row="4"
+                Grid.Column="2"
+                Background="Gray"
+                BorderBrush="Red"
+                BorderThickness="2"
+                CornerRadius="20"
+                Margin="0 0 120 20">
+        </Border>
+
+        <TextBlock Grid.Row="4"
+               Grid.Column="3"
+               HorizontalAlignment="Left"
+               Margin="190 10 10 10">
+            <Run FontSize="15" Foreground="#0F4DDC" FontWeight="Bold">Причал по</Run>
+            <LineBreak/>
+            <Run FontSize="15" Foreground="#0F4DDC" FontWeight="Bold">погрузке</Run>
+            <LineBreak/>
+            <Run FontSize="15" Foreground="#0F4DDC" FontWeight="Bold">одежды</Run>
+        </TextBlock>
     </Grid>
 </Window>

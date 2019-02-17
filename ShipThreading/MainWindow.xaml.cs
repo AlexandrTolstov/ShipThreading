@@ -20,9 +20,18 @@ namespace ShipThreading
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+
+            var Hleb10Ship = new Hleb10(GeneratorWrap);
+            var Hleb50Ship = new Hleb50(GeneratorWrap);
+            var Hleb100Ship = new Hleb100(GeneratorWrap);
+            var Hleb10Ship1 = new Hleb10(GeneratorWrap);
+            var Hleb100Ship2 = new Hleb100(GeneratorWrap);
+
+            GeneratorWrap.Children.RemoveRange(0, 1);
         }
     }
 }
