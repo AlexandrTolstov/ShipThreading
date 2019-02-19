@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ships\IShips.cs" />
     <Compile Include="Ships\Odejda100.cs" />
     <Compile Include="Ships\Odejda50.cs" />
     <Page Include="MainWindow.xaml">

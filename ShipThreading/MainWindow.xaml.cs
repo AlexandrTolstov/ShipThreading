@@ -26,19 +26,36 @@ namespace ShipThreading
         {
             InitializeComponent();
 
-            var Hleb10Ship = new Hleb10(GeneratorWrap);
-            var Hleb50Ship = new Hleb50(GeneratorWrap);
-            var Hleb100Ship = new Hleb100(GeneratorWrap);
-            var Hleb10Ship1 = new Hleb10(GeneratorWrap);
-            var Hleb100Ship2 = new Hleb100(GeneratorWrap);
+            Random rand = new Random();
 
-            var Banana10Ship = new Banana10(GeneratorWrap);
-            var Banana50Ship = new Banana50(GeneratorWrap);
-            var Banana100Ship = new Banana100(GeneratorWrap);
+            IShips[] Ships = new IShips[5];
 
-            var Odejda10Ship = new Odejda10(GeneratorWrap);
-            var Odejda50Ship = new Odejda50(GeneratorWrap);
-            var Odejda100Ship = new Odejda100(GeneratorWrap);
+            for (int i = 0; i < 5; i++)
+            {
+                if(rand.Next(1, 3) == 2)
+                {
+                    Ships[i] = new Hleb10(GeneratorWrap);
+                }
+                else
+                {
+                    Ships[i] = new Hleb50(GeneratorWrap);
+                }
+            }
+
+            //var Hleb50Ship = new Hleb50(GeneratorWrap);
+            //var Hleb100Ship = new Hleb100(GeneratorWrap);
+            //var Hleb10Ship1 = new Hleb10(GeneratorWrap);
+            //var Hleb100Ship2 = new Hleb100(GeneratorWrap);
+
+            //var Banana10Ship = new Banana10(GeneratorWrap);
+            //var Banana50Ship = new Banana50(GeneratorWrap);
+            //var Banana100Ship = new Banana100(GeneratorWrap);
+
+            //var Odejda10Ship = new Odejda10(GeneratorWrap);
+            //var Odejda50Ship = new Odejda50(GeneratorWrap);
+            //var Odejda100Ship = new Odejda100(GeneratorWrap);
+
+
         }
     }
 }

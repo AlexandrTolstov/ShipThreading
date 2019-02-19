@@ -1,13 +1,16 @@
-﻿using System.Windows;
+﻿using ShipThreading.Ships;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
 namespace ShipThreading
 {
-    class Hleb50
+    class Hleb50 : IShips
     {
-        public Hleb50(WrapPanel wrap)
+        public int typeShip { get { return 2; } }
+
+        public void GenShip(WrapPanel wrap)
         {
             var Canvas1 = new Canvas
             {
@@ -42,6 +45,11 @@ namespace ShipThreading
             Canvas1.Children.Add(Path2);
 
             wrap.Children.Add(Canvas1);
+        }
+
+        public Hleb50(WrapPanel wrap)
+        {
+            GenShip(wrap);
         }
     }
 }
