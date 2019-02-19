@@ -54,6 +54,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ships\Odejda100.cs" />
+    <Compile Include="Ships\Odejda50.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,15 +64,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Hleb10.cs" />
-    <Compile Include="Hleb100.cs" />
-    <Compile Include="Hleb50.cs" />
+    <Compile Include="Ships\Banana10.cs" />
+    <Compile Include="Ships\Banana100.cs" />
+    <Compile Include="Ships\Banana50.cs" />
+    <Compile Include="Ships\Hleb10.cs" />
+    <Compile Include="Ships\Hleb100.cs" />
+    <Compile Include="Ships\Hleb50.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ships\Odejda10.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

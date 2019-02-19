@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShipThreading.Ships;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,13 @@ namespace ShipThreading
             var Hleb10Ship1 = new Hleb10(GeneratorWrap);
             var Hleb100Ship2 = new Hleb100(GeneratorWrap);
 
-            GeneratorWrap.Children.RemoveRange(0, 1);
+            var Banana10Ship = new Banana10(GeneratorWrap);
+            var Banana50Ship = new Banana50(GeneratorWrap);
+            var Banana100Ship = new Banana100(GeneratorWrap);
+
+            var Odejda10Ship = new Odejda10(GeneratorWrap);
+            var Odejda50Ship = new Odejda50(GeneratorWrap);
+            var Odejda100Ship = new Odejda100(GeneratorWrap);
         }
     }
 }

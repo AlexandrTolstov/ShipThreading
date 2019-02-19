@@ -3,16 +3,16 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace ShipThreading
+namespace ShipThreading.Ships
 {
-    class Hleb50
+    class Odejda50
     {
-        public Hleb50(WrapPanel wrap)
+        public Odejda50(WrapPanel wrap)
         {
             var Canvas1 = new Canvas
             {
                 Width = 80,
-                Height = 25,
+                Height = 60,
                 Margin = new Thickness(20.0)
             };
 
@@ -24,7 +24,7 @@ namespace ShipThreading
                 Stretch = Stretch.Fill,
                 StrokeLineJoin = PenLineJoin.Round,
                 Stroke = new SolidColorBrush(Color.FromRgb(r: 0, g: 0, b: 0)),
-                Fill = new SolidColorBrush(Color.FromRgb(r: 238, g: 145, b: 145)),
+                Fill = new SolidColorBrush(Color.FromRgb(r: 15, g: 77, b: 220)),
                 Data = Geometry.Parse("F1 M 9.10177,61.6855L 93.1344,61.6855L 114.308,24.4028L 75.9308,28.8767L 76.5925,35.5876L 0.5,35.5876L 9.10177,61.6855 Z ")
             };
             var Path2 = new Path
@@ -35,7 +35,7 @@ namespace ShipThreading
                 Stretch = Stretch.Fill,
                 StrokeLineJoin = PenLineJoin.Round,
                 Stroke = new SolidColorBrush(Color.FromRgb(r: 0, g: 0, b: 0)),
-                Fill = new SolidColorBrush(Color.FromRgb(r: 238, g: 145, b: 145)),
+                Fill = new SolidColorBrush(Color.FromRgb(r: 15, g: 77, b: 220)),
                 Data = Geometry.Parse("F1 M 18.9382,35.5458L 18.9382,21.1919L 24.0661,21.1919L 24.0661,12.6169L 29.5249,12.6169L 29.5249,0.5L 30.352,0.5L 30.4072,35.4837L 18.9382,35.5458 Z ")
             };
             Canvas1.Children.Add(Path1);
