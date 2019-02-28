@@ -8,9 +8,9 @@ namespace ShipThreading
 {
     class Hleb10 : IShips
     {
-        public int typeShip { get { return 1; } }
-
-        public void GenShip(WrapPanel wrap)
+        string IShips.Name { get => "Hleb"; }
+        int IShips.Volume { get => 10; }
+        public Hleb10(WrapPanel wrap)
         {
             var Canvas1 = new Canvas
             {
@@ -45,10 +45,6 @@ namespace ShipThreading
             Canvas1.Children.Add(Path2);
 
             wrap.Children.Add(Canvas1);
-        }
-        public Hleb10(WrapPanel wrap)
-        {
-            GenShip(wrap);
         }
     }
 }

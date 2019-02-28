@@ -1,12 +1,15 @@
-﻿using System.Windows;
+﻿using ShipThreading.Ships;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
 namespace ShipThreading
 {
-    class Banana100
+    class Banana100 : IShips
     {
+        string IShips.Name { get => "Banana"; }
+        int IShips.Volume { get => 100; }
         public Banana100(WrapPanel wrap)
         {
             var Canvas1 = new Canvas

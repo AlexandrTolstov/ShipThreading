@@ -1,12 +1,15 @@
-﻿using System.Windows;
+﻿using ShipThreading.Ships;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
 namespace ShipThreading
 {
-    class Hleb100
+    class Hleb100 : IShips
     {
+        string IShips.Name { get => "Hleb"; }
+        int IShips.Volume { get => 100; }
         public Hleb100(WrapPanel wrap)
         {
             var Canvas1 = new Canvas

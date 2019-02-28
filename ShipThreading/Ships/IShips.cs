@@ -5,9 +5,9 @@ using System.Windows.Shapes;
 
 namespace ShipThreading.Ships
 {
-    interface IShips
+    public interface IShips
     {
-        void GenShip(WrapPanel wrap);
-        int typeShip { get; }
+        string Name { get; }
+        int Volume { get; }
     }
 }

@@ -1,12 +1,15 @@
-﻿using System.Windows;
+﻿using ShipThreading.Ships;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
 namespace ShipThreading
 {
-    class Odejda10
+    class Odejda10 : IShips
     {
+        string IShips.Name { get => "Odejda"; }
+        int IShips.Volume { get => 10; }
         public Odejda10(WrapPanel wrap)
         {
             var Canvas1 = new Canvas

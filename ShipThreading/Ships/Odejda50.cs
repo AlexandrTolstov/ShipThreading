@@ -5,8 +5,10 @@ using System.Windows.Shapes;
 
 namespace ShipThreading.Ships
 {
-    class Odejda50
+    class Odejda50 : IShips
     {
+        string IShips.Name { get => "Odejda"; }
+        int IShips.Volume { get => 50; }
         public Odejda50(WrapPanel wrap)
         {
             var Canvas1 = new Canvas

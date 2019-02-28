@@ -21,26 +21,34 @@ namespace ShipThreading
     /// </summary>
     public partial class MainWindow : Window
     {
-        
         public MainWindow()
         {
             InitializeComponent();
 
-            Random rand = new Random();
+            List<IShips> GenShips = new List<IShips>(); //Хранит карабли в генераторе
+            List<IShips> TunelShips = new List<IShips>(); //Хранит карабли в тунели
 
-            IShips[] Ships = new IShips[5];
+            List<IShips> PrichalHlebShips = new List<IShips>(); //Хранит карабли в причале по погрузке хлеба
+            List<IShips> PrichalBananShips = new List<IShips>(); //Хранит карабли в причале по погрузке бананов
+            List<IShips> PrichalOdejdaShips = new List<IShips>(); //Хранит карабли в причале по погрузке Oдежды
 
-            for (int i = 0; i < 5; i++)
-            {
-                if(rand.Next(1, 3) == 2)
-                {
-                    Ships[i] = new Hleb10(GeneratorWrap);
-                }
-                else
-                {
-                    Ships[i] = new Hleb50(GeneratorWrap);
-                }
-            }
+            ShipOperate.GenShip(GenShips, GeneratorWrap);
+
+            //Random rand = new Random();
+
+            //IShips[] Ships = new IShips[5];
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    if(rand.Next(1, 3) == 2)
+            //    {
+            //        Ships[i] = new Hleb10(GeneratorWrap);
+            //    }
+            //    else
+            //    {
+            //        Ships[i] = new Hleb50(GeneratorWrap);
+            //    }
+            //}
 
             //var Hleb50Ship = new Hleb50(GeneratorWrap);
             //var Hleb100Ship = new Hleb100(GeneratorWrap);
