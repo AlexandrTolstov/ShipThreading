@@ -30,7 +30,7 @@ namespace ShipThreading.Ships
             timer.Start(); //Выполняет через определенную выдержку времени действие
             timer.Tick += (sender, args) =>
             {
-                if (shipsGenerator.Count < 10)
+                if (shipsGenerator.Count < 13)
                 {
                     int randNum = rand.Next(1, 10);
                     wrap.Children.Clear();//Очищает Wrap panel

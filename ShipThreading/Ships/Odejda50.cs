@@ -15,8 +15,8 @@ namespace ShipThreading.Ships
             {
                 var Canvas1 = new Canvas
                 {
-                    Width = 80,
-                    Height = 60,
+                    Width = 80 * 0.8,
+                    Height = 60 * 0.8,
                     Margin = new Thickness(20.0)
                 };
 
@@ -44,12 +44,15 @@ namespace ShipThreading.Ships
                 };
                 Canvas1.Children.Add(Path1);
                 Canvas1.Children.Add(Path2);
+
+                /*Уменьшаем немного массштаб караблика*/
+                ScaleTransform st = new ScaleTransform();
+                st.ScaleX = 0.7;
+                st.ScaleY = 0.7;
+                Canvas1.RenderTransform = st;
+
                 return Canvas1;
             }
         }
     }
 }
-
-//Canvas1.Children.Add(Path1);
-//Canvas1.Children.Add(Path2);
-//wrap.Children.Add(Canvas1);

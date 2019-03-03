@@ -30,6 +30,8 @@ namespace ShipThreading
         List<IShips> PrichalBananShips = new List<IShips>(); //Хранит карабли в причале по погрузке бананов
         List<IShips> PrichalOdejdaShips = new List<IShips>(); //Хранит карабли в причале по погрузке Oдежды
 
+        public bool startTriger = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -37,11 +39,16 @@ namespace ShipThreading
 
         private void GenerShip_Click(object sender, RoutedEventArgs e)
         {
-            if (GenShips.Count < 10)
+            if (GenShips.Count < 13 && startTriger == false)
             {
                 GeneratorShips generatorShips = new GeneratorShips(GenShips, GeneratorWrap);
                 generatorShips.Generate();
             }
+
+            TunelShips tunelShips = new TunelShips(GenShips, TunelShips, GeneratorWrap, TunelWrap);
+            tunelShips.Generate();
+
+            startTriger = true;
         }
     }
 }

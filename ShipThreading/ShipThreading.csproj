@@ -58,6 +58,7 @@
     <Compile Include="Ships\IShips.cs" />
     <Compile Include="Ships\Odejda100.cs" />
     <Compile Include="Ships\Odejda50.cs" />
+    <Compile Include="Ships\TunelShips.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
