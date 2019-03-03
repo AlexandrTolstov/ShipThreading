@@ -5,59 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShipThreading"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1230">
+        Title="MainWindow" Height="850" Width="1230">
+    <StackPanel Orientation="Vertical">
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button Width="200" Height="30" x:Name="GenerShip" Click="GenerShip_Click">Start</Button>
+        </Menu>
+        
+        <Grid ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="180"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="180"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="600"></ColumnDefinition>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="350"></RowDefinition>
-            <RowDefinition Height="30"></RowDefinition>
-            <RowDefinition Height="180"></RowDefinition>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition Height="180"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"></ColumnDefinition>
-            <ColumnDefinition Width="600"></ColumnDefinition>
-            <ColumnDefinition Width="300"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Width="200" Grid.Row="0" Grid.Column="0">
+                <Canvas x:Name="Canv_Hleb" Height="100">
+                    <Label Canvas.Left="110" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">Хлеб</Label>
+                    <Path x:Name="Path_Hleb" Width="97.5" Height="33.2867" Canvas.Left="0" Canvas.Top="20.6996" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#EE9191" Data="F1 M 7.79359,53.4863L 79.0465,53.4863L 97,21.1996L 64.4593,25.074L 65.0203,30.8856L 0.5,30.8856L 7.79359,53.4863 Z "/>
+                    <Path x:Name="Path_Hleb_0" Width="10.7248" Height="31.3495" Canvas.Left="15.6341" Canvas.Top="-3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#EE9191" Data="F1 M 16.1341,30.8494L 16.1341,18.4191L 20.4822,18.4191L 20.4822,10.9931L 25.1108,10.9931L 25.1108,0.499969L 25.8121,0.499969L 25.8589,30.7956L 16.1341,30.8494 Z "/>
+                </Canvas>
+                <Canvas x:Name="Canv_Banana" Height="100">
+                    <Label Canvas.Left="110" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#E0AF00">Бананы</Label>
+                    <Path x:Name="Path_Banana" Width="97.5" Height="33.2867" Canvas.Left="0" Canvas.Top="20.6996" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFFF00" Data="F1 M 7.79359,53.4863L 79.0465,53.4863L 97,21.1996L 64.4593,25.074L 65.0203,30.8856L 0.5,30.8856L 7.79359,53.4863 Z "/>
+                    <Path x:Name="Path_Banana_0" Width="10.7248" Height="31.3495" Canvas.Left="15.6341" Canvas.Top="-3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFFF00" Data="F1 M 16.1341,30.8494L 16.1341,18.4191L 20.4822,18.4191L 20.4822,10.9931L 25.1108,10.9931L 25.1108,0.499969L 25.8121,0.499969L 25.8589,30.7956L 16.1341,30.8494 Z "/>
+                </Canvas>
+                <Canvas x:Name="Canv_Odejda" Height="100">
+                    <Label Canvas.Left="110" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#0F4DDC">Одежда</Label>
+                    <Path x:Name="Path_Odejda" Width="97.5" Height="33.2867" Canvas.Left="0" Canvas.Top="20.6996" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#4978E3" Data="F1 M 7.79359,53.4863L 79.0465,53.4863L 97,21.1996L 64.4593,25.074L 65.0203,30.8856L 0.5,30.8856L 7.79359,53.4863 Z "/>
+                    <Path x:Name="Path_Odejda_0" Width="10.7248" Height="31.3495" Canvas.Left="15.6341" Canvas.Top="-3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#4978E3" Data="F1 M 16.1341,30.8494L 16.1341,18.4191L 20.4822,18.4191L 20.4822,10.9931L 25.1108,10.9931L 25.1108,0.499969L 25.8121,0.499969L 25.8589,30.7956L 16.1341,30.8494 Z "/>
+                </Canvas>
+            </StackPanel>
 
-        <StackPanel Orientation="Vertical" Width="200" Grid.Row="0" Grid.Column="0">
-            <Canvas x:Name="Canv_Hleb" Height="100">
-                <Label Canvas.Left="110" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">Хлеб</Label>
-                <Path x:Name="Path_Hleb" Width="97.5" Height="33.2867" Canvas.Left="0" Canvas.Top="20.6996" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#EE9191" Data="F1 M 7.79359,53.4863L 79.0465,53.4863L 97,21.1996L 64.4593,25.074L 65.0203,30.8856L 0.5,30.8856L 7.79359,53.4863 Z "/>
-                <Path x:Name="Path_Hleb_0" Width="10.7248" Height="31.3495" Canvas.Left="15.6341" Canvas.Top="-3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#EE9191" Data="F1 M 16.1341,30.8494L 16.1341,18.4191L 20.4822,18.4191L 20.4822,10.9931L 25.1108,10.9931L 25.1108,0.499969L 25.8121,0.499969L 25.8589,30.7956L 16.1341,30.8494 Z "/>
-            </Canvas>
-            <Canvas x:Name="Canv_Banana" Height="100">
-                <Label Canvas.Left="110" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#E0AF00">Бананы</Label>
-                <Path x:Name="Path_Banana" Width="97.5" Height="33.2867" Canvas.Left="0" Canvas.Top="20.6996" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFFF00" Data="F1 M 7.79359,53.4863L 79.0465,53.4863L 97,21.1996L 64.4593,25.074L 65.0203,30.8856L 0.5,30.8856L 7.79359,53.4863 Z "/>
-                <Path x:Name="Path_Banana_0" Width="10.7248" Height="31.3495" Canvas.Left="15.6341" Canvas.Top="-3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFFF00" Data="F1 M 16.1341,30.8494L 16.1341,18.4191L 20.4822,18.4191L 20.4822,10.9931L 25.1108,10.9931L 25.1108,0.499969L 25.8121,0.499969L 25.8589,30.7956L 16.1341,30.8494 Z "/>
-            </Canvas>
-            <Canvas x:Name="Canv_Odejda" Height="100">
-                <Label Canvas.Left="110" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#0F4DDC">Одежда</Label>
-                <Path x:Name="Path_Odejda" Width="97.5" Height="33.2867" Canvas.Left="0" Canvas.Top="20.6996" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#4978E3" Data="F1 M 7.79359,53.4863L 79.0465,53.4863L 97,21.1996L 64.4593,25.074L 65.0203,30.8856L 0.5,30.8856L 7.79359,53.4863 Z "/>
-                <Path x:Name="Path_Odejda_0" Width="10.7248" Height="31.3495" Canvas.Left="15.6341" Canvas.Top="-3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#4978E3" Data="F1 M 16.1341,30.8494L 16.1341,18.4191L 20.4822,18.4191L 20.4822,10.9931L 25.1108,10.9931L 25.1108,0.499969L 25.8121,0.499969L 25.8589,30.7956L 16.1341,30.8494 Z "/>
-            </Canvas>
-        </StackPanel>
+            <StackPanel Orientation="Vertical" Width="200" Grid.Row="0" Grid.Column="2">
+                <Canvas x:Name="Ship_10" Height="80">
+                    <Label Canvas.Left="100" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">10</Label>
+                    <Path Width="76.872" Height="25.7876" Canvas.Left="-1.52588e-005" Canvas.Top="15.8918" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 6.23451,41.1794L 62.2562,41.1794L 76.3719,16.3918L 50.7872,19.3664L 51.2283,23.8281L 0.499985,23.8281L 6.23451,41.1794 Z "/>
+                    <Path Width="8.64601" Height="24.3003" Canvas.Left="12.2921" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 12.7921,23.8003L 12.7921,14.2571L 16.2108,14.2571L 16.2108,8.55594L 19.85,8.55594L 19.85,0.5L 20.4014,0.5L 20.4381,23.759L 12.7921,23.8003 Z "/>
+                </Canvas>
+                <Canvas x:Name="Ship_50" Height="80">
+                    <Label Canvas.Left="130" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">50</Label>
+                    <Path Width="114.808" Height="38.2827" Canvas.Left="0" Canvas.Top="23.9028" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 9.10177,61.6855L 93.1344,61.6855L 114.308,24.4028L 75.9308,28.8767L 76.5925,35.5876L 0.5,35.5876L 9.10177,61.6855 Z "/>
+                    <Path Width="12.469" Height="36.0458" Canvas.Left="18.4382" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 18.9382,35.5458L 18.9382,21.1919L 24.0661,21.1919L 24.0661,12.6169L 29.5249,12.6169L 29.5249,0.5L 30.352,0.5L 30.4072,35.4837L 18.9382,35.5458 Z "/>
+                </Canvas>
+                <Canvas x:Name="Ship_100" Height="80">
+                    <Label Canvas.Left="160" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">100</Label>
+                    <Path Width="151.914" Height="55.5009" Canvas.Left="0" Canvas.Top="34.9417" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 11.9063,89.9425L 123.337,89.9425L 151.414,35.4417L 100.524,41.9818L 101.402,51.792L 0.5,51.792L 11.9063,89.9425 Z "/>
+                    <Path Width="16.2084" Height="52.2308" Canvas.Left="24.4498" Canvas.Top="3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 24.9498,51.7308L 24.9498,30.748L 31.7497,30.748L 31.7497,18.2128L 38.9883,18.2128L 38.9883,0.500031L 40.0851,0.500031L 40.1582,51.64L 24.9498,51.7308 Z "/>
+                </Canvas>
+            </StackPanel>
 
-        <StackPanel Orientation="Vertical" Width="200" Grid.Row="0" Grid.Column="2">
-            <Canvas x:Name="Ship_10" Height="80">
-                <Label Canvas.Left="100" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">10</Label>
-                <Path Width="76.872" Height="25.7876" Canvas.Left="-1.52588e-005" Canvas.Top="15.8918" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 6.23451,41.1794L 62.2562,41.1794L 76.3719,16.3918L 50.7872,19.3664L 51.2283,23.8281L 0.499985,23.8281L 6.23451,41.1794 Z "/>
-                <Path Width="8.64601" Height="24.3003" Canvas.Left="12.2921" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 12.7921,23.8003L 12.7921,14.2571L 16.2108,14.2571L 16.2108,8.55594L 19.85,8.55594L 19.85,0.5L 20.4014,0.5L 20.4381,23.759L 12.7921,23.8003 Z "/>
-            </Canvas>
-            <Canvas x:Name="Ship_50" Height="80">
-                <Label Canvas.Left="130" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">50</Label>
-                <Path Width="114.808" Height="38.2827" Canvas.Left="0" Canvas.Top="23.9028" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 9.10177,61.6855L 93.1344,61.6855L 114.308,24.4028L 75.9308,28.8767L 76.5925,35.5876L 0.5,35.5876L 9.10177,61.6855 Z "/>
-                <Path Width="12.469" Height="36.0458" Canvas.Left="18.4382" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 18.9382,35.5458L 18.9382,21.1919L 24.0661,21.1919L 24.0661,12.6169L 29.5249,12.6169L 29.5249,0.5L 30.352,0.5L 30.4072,35.4837L 18.9382,35.5458 Z "/>
-            </Canvas>
-            <Canvas x:Name="Ship_100" Height="80">
-                <Label Canvas.Left="160" Canvas.Top="20" FontSize="15" FontWeight="Bold" Foreground="#EA2E2E">100</Label>
-                <Path Width="151.914" Height="55.5009" Canvas.Left="0" Canvas.Top="34.9417" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 11.9063,89.9425L 123.337,89.9425L 151.414,35.4417L 100.524,41.9818L 101.402,51.792L 0.5,51.792L 11.9063,89.9425 Z "/>
-                <Path Width="16.2084" Height="52.2308" Canvas.Left="24.4498" Canvas.Top="3.05176e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE9191" Data="F1 M 24.9498,51.7308L 24.9498,30.748L 31.7497,30.748L 31.7497,18.2128L 38.9883,18.2128L 38.9883,0.500031L 40.0851,0.500031L 40.1582,51.64L 24.9498,51.7308 Z "/>
-            </Canvas>
-        </StackPanel>
-
-        <Border x:Name="GeneratorFild"
+            <Border x:Name="GeneratorFild"
                 Grid.Row="0"
                 Grid.Column="1"
                 Background="Aqua"
@@ -65,18 +69,18 @@
                 BorderThickness="2"
                 CornerRadius="20"
                 Margin="20 30 20 0">
-            <WrapPanel x:Name="GeneratorWrap"></WrapPanel>
-        </Border>
-        <Label Grid.Row="0"
+                <WrapPanel x:Name="GeneratorWrap"></WrapPanel>
+            </Border>
+            <Label Grid.Row="0"
                Grid.Column="1"
                HorizontalAlignment="Center"
                FontSize="20">Генератор караблей</Label>
-        <Border Grid.Row="1"
+            <Border Grid.Row="1"
                 Grid.Column="1"
                 Background="Aqua"
                 Margin="250 0 250 0">
-        </Border>
-        <Border x:Name="TunellFild"
+            </Border>
+            <Border x:Name="TunellFild"
                 Grid.Row="2"
                 Grid.Column="1"
                 Background="Aqua"
@@ -84,9 +88,10 @@
                 BorderThickness="2"
                 CornerRadius="20"
                 Margin="130 0 130 0">
-        </Border>
+                <WrapPanel x:Name="TunelWrap"></WrapPanel>
+            </Border>
 
-        <TextBlock Grid.Row="2"
+            <TextBlock Grid.Row="2"
                Grid.Column="1"
                HorizontalAlignment="Right"
                Margin="10">
@@ -95,17 +100,17 @@
             <Run FontSize="15" Foreground="Red" FontWeight="Bold">Вместимость 5</Run>
             <LineBreak/>
             <Run FontSize="15" Foreground="Red" FontWeight="Bold">корабликов</Run>
-        </TextBlock>
+            </TextBlock>
 
-        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
-            <Canvas Width="1200" Height="70" Canvas.Left="0" Canvas.Top="0">
-                <Path Width="400" Height="70" Canvas.Left="150" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="Aqua" Data="F1 M 334.589,0.5L 0.5,129.494L 124.167,129.049L 448.978,0.944214L 334.589,0.5 Z "/>
-                <Path Width="400" Height="70" Canvas.Left="630" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="Aqua" Data="F1 M 703.1,425.248L 369.011,296.254L 492.678,296.698L 817.489,424.803L 703.1,425.248 Z "/>
-                <Rectangle Width="50" Height="70" Canvas.Left="570" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="Aqua"/>
-            </Canvas>
-        </Border>
+            <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+                <Canvas Width="1200" Height="70" Canvas.Left="0" Canvas.Top="0">
+                    <Path Width="400" Height="70" Canvas.Left="150" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="Aqua" Data="F1 M 334.589,0.5L 0.5,129.494L 124.167,129.049L 448.978,0.944214L 334.589,0.5 Z "/>
+                    <Path Width="400" Height="70" Canvas.Left="630" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="Aqua" Data="F1 M 703.1,425.248L 369.011,296.254L 492.678,296.698L 817.489,424.803L 703.1,425.248 Z "/>
+                    <Rectangle Width="50" Height="70" Canvas.Left="570" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="Aqua"/>
+                </Canvas>
+            </Border>
 
-        <Border x:Name="PrichalHleb"
+            <Border x:Name="PrichalHleb"
                 Grid.Row="4"
                 Grid.Column="0"
                 Background="Gray"
@@ -113,9 +118,9 @@
                 BorderThickness="2"
                 CornerRadius="20"
                 Margin="120 0 0 20">
-        </Border>
+            </Border>
 
-        <TextBlock Grid.Row="4"
+            <TextBlock Grid.Row="4"
                Grid.Column="0"
                HorizontalAlignment="Left"
                Margin="10">
@@ -124,9 +129,9 @@
             <Run FontSize="15" Foreground="Red" FontWeight="Bold">погрузке</Run>
             <LineBreak/>
             <Run FontSize="15" Foreground="Red" FontWeight="Bold">хлеба</Run>
-        </TextBlock>
+            </TextBlock>
 
-        <Border x:Name="PrichalBanana"
+            <Border x:Name="PrichalBanana"
                 Grid.Row="4"
                 Grid.Column="1"
                 Background="Gray"
@@ -134,9 +139,9 @@
                 BorderThickness="2"
                 CornerRadius="20"
                 Margin="210 0 210 20">
-        </Border>
+            </Border>
 
-        <TextBlock Grid.Row="4"
+            <TextBlock Grid.Row="4"
                Grid.Column="1"
                HorizontalAlignment="Left"
                Margin="400 10 10 10">
@@ -145,9 +150,9 @@
             <Run FontSize="15" Foreground="#E0AF00" FontWeight="Bold">погрузке</Run>
             <LineBreak/>
             <Run FontSize="15" Foreground="#E0AF00" FontWeight="Bold">банана</Run>
-        </TextBlock>
+            </TextBlock>
 
-        <Border x:Name="PrichalOdejda"
+            <Border x:Name="PrichalOdejda"
                 Grid.Row="4"
                 Grid.Column="2"
                 Background="Gray"
@@ -155,9 +160,9 @@
                 BorderThickness="2"
                 CornerRadius="20"
                 Margin="0 0 120 20">
-        </Border>
+            </Border>
 
-        <TextBlock Grid.Row="4"
+            <TextBlock Grid.Row="4"
                Grid.Column="3"
                HorizontalAlignment="Left"
                Margin="190 10 10 10">
@@ -166,6 +171,7 @@
             <Run FontSize="15" Foreground="#0F4DDC" FontWeight="Bold">погрузке</Run>
             <LineBreak/>
             <Run FontSize="15" Foreground="#0F4DDC" FontWeight="Bold">одежды</Run>
-        </TextBlock>
-    </Grid>
+            </TextBlock>
+        </Grid>
+    </StackPanel>
 </Window>

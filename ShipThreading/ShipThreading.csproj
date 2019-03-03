@@ -54,10 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ships\GeneratorShips.cs" />
     <Compile Include="Ships\IShips.cs" />
     <Compile Include="Ships\Odejda100.cs" />
     <Compile Include="Ships\Odejda50.cs" />
-    <Compile Include="Ships\ShipOperate.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

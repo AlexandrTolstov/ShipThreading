@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace ShipThreading
 {
@@ -21,49 +23,25 @@ namespace ShipThreading
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<IShips> GenShips = new List<IShips>(); //Хранит карабли в генераторе
+        List<IShips> TunelShips = new List<IShips>(); //Хранит карабли в тунели
+
+        List<IShips> PrichalHlebShips = new List<IShips>(); //Хранит карабли в причале по погрузке хлеба
+        List<IShips> PrichalBananShips = new List<IShips>(); //Хранит карабли в причале по погрузке бананов
+        List<IShips> PrichalOdejdaShips = new List<IShips>(); //Хранит карабли в причале по погрузке Oдежды
+
         public MainWindow()
         {
             InitializeComponent();
+        }
 
-            List<IShips> GenShips = new List<IShips>(); //Хранит карабли в генераторе
-            List<IShips> TunelShips = new List<IShips>(); //Хранит карабли в тунели
-
-            List<IShips> PrichalHlebShips = new List<IShips>(); //Хранит карабли в причале по погрузке хлеба
-            List<IShips> PrichalBananShips = new List<IShips>(); //Хранит карабли в причале по погрузке бананов
-            List<IShips> PrichalOdejdaShips = new List<IShips>(); //Хранит карабли в причале по погрузке Oдежды
-
-            ShipOperate.GenShip(GenShips, GeneratorWrap);
-
-            //Random rand = new Random();
-
-            //IShips[] Ships = new IShips[5];
-
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    if(rand.Next(1, 3) == 2)
-            //    {
-            //        Ships[i] = new Hleb10(GeneratorWrap);
-            //    }
-            //    else
-            //    {
-            //        Ships[i] = new Hleb50(GeneratorWrap);
-            //    }
-            //}
-
-            //var Hleb50Ship = new Hleb50(GeneratorWrap);
-            //var Hleb100Ship = new Hleb100(GeneratorWrap);
-            //var Hleb10Ship1 = new Hleb10(GeneratorWrap);
-            //var Hleb100Ship2 = new Hleb100(GeneratorWrap);
-
-            //var Banana10Ship = new Banana10(GeneratorWrap);
-            //var Banana50Ship = new Banana50(GeneratorWrap);
-            //var Banana100Ship = new Banana100(GeneratorWrap);
-
-            //var Odejda10Ship = new Odejda10(GeneratorWrap);
-            //var Odejda50Ship = new Odejda50(GeneratorWrap);
-            //var Odejda100Ship = new Odejda100(GeneratorWrap);
-
-
+        private void GenerShip_Click(object sender, RoutedEventArgs e)
+        {
+            if (GenShips.Count < 10)
+            {
+                GeneratorShips generatorShips = new GeneratorShips(GenShips, GeneratorWrap);
+                generatorShips.Generate();
+            }
         }
     }
 }

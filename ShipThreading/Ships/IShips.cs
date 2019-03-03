@@ -9,5 +9,6 @@ namespace ShipThreading.Ships
     {
         string Name { get; }
         int Volume { get; }
+        Canvas Canvas1 { get; }
     }
 }
