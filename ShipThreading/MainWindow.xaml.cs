@@ -48,6 +48,15 @@ namespace ShipThreading
             TunelShips tunelShips = new TunelShips(GenShips, TunelShips, GeneratorWrap, TunelWrap);
             tunelShips.Generate();
 
+            PrichalHleb hlebShips = new PrichalHleb(TunelShips, PrichalHlebShips, TunelWrap, HlebWrap);
+            hlebShips.Generate();
+
+            PrichalBanana bananaShips = new PrichalBanana(TunelShips, PrichalBananShips, TunelWrap, BananaWrap);
+            bananaShips.Generate();
+
+            PrichalOdejda odejdaShips = new PrichalOdejda(TunelShips, PrichalOdejdaShips, TunelWrap, OdejdaWrap);
+            odejdaShips.Generate();
+
             startTriger = true;
         }
     }

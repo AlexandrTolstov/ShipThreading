@@ -87,7 +87,7 @@
                 BorderBrush="Red"
                 BorderThickness="2"
                 CornerRadius="20"
-                Margin="130 0 130 0">
+                Margin="90 0 130 0">
                 <WrapPanel x:Name="TunelWrap"></WrapPanel>
             </Border>
 
@@ -118,6 +118,7 @@
                 BorderThickness="2"
                 CornerRadius="20"
                 Margin="120 0 0 20">
+                <WrapPanel x:Name="HlebWrap"></WrapPanel>
             </Border>
 
             <TextBlock Grid.Row="4"
@@ -139,6 +140,7 @@
                 BorderThickness="2"
                 CornerRadius="20"
                 Margin="210 0 210 20">
+                <WrapPanel x:Name="BananaWrap"></WrapPanel>
             </Border>
 
             <TextBlock Grid.Row="4"
@@ -160,6 +162,7 @@
                 BorderThickness="2"
                 CornerRadius="20"
                 Margin="0 0 120 20">
+                <WrapPanel x:Name="OdejdaWrap"></WrapPanel>
             </Border>
 
             <TextBlock Grid.Row="4"

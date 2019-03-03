@@ -44,7 +44,7 @@ namespace ShipThreading.Ships
                     shipsGenerator.RemoveAt(indShip); //Удаляем из shipsGenerator элемент по индексом indShip
 
                     foreach (var item in shipsGenerator)//Добавляет все карабли из shipsGenerator в genWrap
-                    {
+                    {      
                         genWrap.Children.Add(item.Canvas1);
                     }
 

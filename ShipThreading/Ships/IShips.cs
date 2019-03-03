@@ -7,8 +7,8 @@ namespace ShipThreading.Ships
 {
     public interface IShips
     {
-        string Name { get; }
-        int Volume { get; }
-        Canvas Canvas1 { get; }
+        string Name { get; set; }
+        int Volume { get; set; }
+        Canvas Canvas1 { get;}
     }
 }

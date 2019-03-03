@@ -8,8 +8,13 @@ namespace ShipThreading
 {
     class Banana10 : IShips
     {
-        string IShips.Name { get => "Banana"; }
-        int IShips.Volume { get => 10; }
+        public string Name { get; set; }
+        public int Volume { get; set; }
+        public Banana10()
+        {
+            Name = "Banana";
+            Volume = 10;
+        }
         Canvas IShips.Canvas1
         {
             get
@@ -43,8 +48,10 @@ namespace ShipThreading
                     Fill = new SolidColorBrush(Color.FromRgb(r: 255, g: 255, b: 0)),
                     Data = Geometry.Parse("F1 M 12.7921,23.8003L 12.7921,14.2571L 16.2108,14.2571L 16.2108,8.55594L 19.85,8.55594L 19.85,0.5L 20.4014,0.5L 20.4381,23.759L 12.7921,23.8003 Z ")
                 };
+                var label = new Label { Content = Volume.ToString(), FontSize = 20, Margin = new Thickness(80.0, 0.0, 0.0, 0.0) };
                 Canvas1.Children.Add(Path1);
                 Canvas1.Children.Add(Path2);
+                Canvas1.Children.Add(label);
 
                 /*Уменьшаем немного массштаб караблика*/
                 ScaleTransform st = new ScaleTransform();
