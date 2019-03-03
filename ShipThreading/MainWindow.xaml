@@ -11,7 +11,7 @@
             <Button Width="200" Height="30" x:Name="GenerShip" Click="GenerShip_Click">Start</Button>
         </Menu>
         
-        <Grid ShowGridLines="True">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="350"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
