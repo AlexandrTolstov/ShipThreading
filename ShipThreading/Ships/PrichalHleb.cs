@@ -37,13 +37,16 @@ namespace ShipThreading.Ships
                     tunWrap.Children.Clear();//Очищает tunWrap
                     hlebWrap.Children.Clear();//Очищает hlebWrap
 
-                    Random rand = new Random();
-                    indShip = rand.Next(0, tunelGenerator.Count);
-
-                    if (tunelGenerator[indShip].Name == "Hleb")
+                    indShip = 0;
+                    foreach (var ship in tunelGenerator)
                     {
-                        prichalHleb.Add(tunelGenerator[indShip]); //Добовляем карабль из tunelGenerator в prichalHleb
-                        tunelGenerator.RemoveAt(indShip); //Удаляем из tunelGenerator элемент по индексом indShip
+                        if (ship.Name == "Hleb")
+                        {
+                            prichalHleb.Add(ship); //Добовляем карабль из tunelGenerator в prichalHleb
+                            tunelGenerator.RemoveAt(indShip); //Удаляем из tunelGenerator элемент по индексом indShip
+                            break;
+                        }
+                        indShip += 1;
                     }
 
                     foreach (var item in tunelGenerator)//Добавляет все карабли из shipsGenerator в genWrap
