@@ -25,7 +25,7 @@ namespace ShipThreading.Ships
             Random rand = new Random();          
             IShips ships;
 
-            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
 
             timer.Start(); //Выполняет через определенную выдержку времени действие
             timer.Tick += (sender, args) =>

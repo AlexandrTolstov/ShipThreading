@@ -27,7 +27,7 @@ namespace ShipThreading.Ships
 
         public void Generate()
         {
-            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1.1) };
 
             timer.Start(); //Выполняет через определенную выдержку времени действие
             timer.Tick += (sender, args) =>

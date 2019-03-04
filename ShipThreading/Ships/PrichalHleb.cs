@@ -60,7 +60,7 @@ namespace ShipThreading.Ships
                 }
                 else if (prichalHleb.Count == 1)
                 {
-                    prichalHleb[0].Volume -= 1;
+                    prichalHleb[0].Volume -= 10;
 
                     hlebWrap.Children.RemoveAt(0);//Очищает hlebWrap
                     hlebWrap.Children.Add(prichalHleb[0].Canvas1);

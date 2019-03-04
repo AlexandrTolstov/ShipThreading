@@ -60,7 +60,7 @@ namespace ShipThreading.Ships
                 }
                 else if (prichalOdejda.Count == 1)
                 {
-                    prichalOdejda[0].Volume -= 1;
+                    prichalOdejda[0].Volume -= 10;
 
                     odejdaWrap.Children.RemoveAt(0);//Очищает hlebWrap
                     odejdaWrap.Children.Add(prichalOdejda[0].Canvas1);
